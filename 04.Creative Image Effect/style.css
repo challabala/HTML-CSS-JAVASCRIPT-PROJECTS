@@ -1,0 +1,59 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    display: flex;
+    background-color: cadetblue;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.main{
+    width: 800px;
+    height: 500px;
+    background-color: aquamarine;
+    border: 2px solid black;
+    border-radius: 20px;
+    position: relative;
+}
+.clip{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+}
+.clip1{
+    background: url(https://template.canva.com/EAFy-Kja1dg/1/0/800w-5FvfqTLLzUo.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    clip-path: polygon(0 0, 0% 100%, 100% 100%);
+}
+.clip2{
+    background: url(https://template.canva.com/EAFdz6GTx9k/1/0/800w-NDnJve-aDE0.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    clip-path: polygon(51% 0, 0% 100%, 100% 100%);
+}
+.clip3{
+    background: url(https://template.canva.com/EAFdXoDVpv8/1/0/800w-9k9uzZDWwZc.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+
+.main:hover .clip{
+    clip-path:polygon(100% 0,100% 0,100% 100%,100% 100%); ;
+}
+
+.main .clip:hover{
+    clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+}
